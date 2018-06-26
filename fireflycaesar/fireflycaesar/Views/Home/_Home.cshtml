@@ -1,0 +1,51 @@
+﻿<!-- ko with: home -->
+
+<script type="text/javascript" src="~/Scripts/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+<script src="~/Scripts/projectscripts/warning.js"></script>
+<script type="text/javascript" src="~/Scripts/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="~/Content/font-awesome.css">
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div width="100%" id="moduleform"></div>
+            <button id="generatebtn" onclick="generateYAML()" class="btn btn-primary" hidden>Create YAML</button>
+            <br />
+            <br />
+            <div id="selectarea">
+                <select class="custom-select" style="width: 100%;" id="selectbox0" onchange="generateform(this)">
+                    <option id="firstoption" selected="selected" disabled="disabled"></option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <h1></h1>
+            <div hidden id="generatedYamlTextField">
+                <h1>Generated YAML</h1>
+                <label name="textfieldname" id="textfieldname">Yaml filename:</label>
+                <input class="form-control" required id="yamlfilename">
+                <br>
+                <textarea name="yaml" id="yamltextfield" rows="20" class="lined" style="width: 707px; resize: none; z-index: auto; position: relative; line-height: normal; font-size: 13.3333px; transition: none; background: transparent !important;" wrap="off" data-gramm="true" data-txt_gramm_id="1" data-gramm_id="1" spellcheck="false" data-gramm_editor="true"></textarea>
+                <br><button type="button" id="downloadyaml" onclick="downloadyaml()" class="btn btn-primary">Download YAML</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    WarningBeforePageLeave();
+</script>
+
+<script src='~/Scripts/projectscripts/download-yaml-file.js'></script>
+<script src='~/Scripts/projectscripts/modules-form-generator.js'></script>
+<script src="~/Scripts/projectscripts/yaml-generator.js"></script>
+<script src="~/Scripts/projectscripts/Webscraper.js"></script>
+
+<!-- /ko -->

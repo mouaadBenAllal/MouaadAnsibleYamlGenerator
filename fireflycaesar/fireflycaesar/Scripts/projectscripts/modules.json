@@ -1,0 +1,54 @@
+{
+  "win_acl": {
+    "- name:": {
+      "required": true,
+      "options": false
+    },
+    "    user:": {
+      "required": true,
+      "options": false
+    },
+    "    path:": {
+      "required": true,
+      "options": false
+    },
+    "    rights:": {
+      "required": true,
+      "options": false
+    },
+    "    type:": {
+      "required": true,
+      "options": [ "allow", "deny" ]
+    },
+    "    state:": {
+      "required": false,
+      "options": [ "present", "absent" ]
+    },
+    "    inherit:": {
+      "required": false,
+      "options": [ "ContainerInherit", "ObjectInherit" ]
+    },
+    "    propagation:": {
+      "required": false,
+      "options": [ "'None'", "'InheritOnly'", "'NoPropagateInherit'" ]
+    }
+  },
+  "win_acl_inheritance": {
+    "- name:": {
+      "required": true,
+      "options": false
+    },
+      "    path:": {
+        "required": true,
+        "options": false
+      },
+    "    reorganize:": {
+      "required": false,
+      "options": [ "no", "yes" ]
+    },
+    "    state:": {
+      "required": false,
+      "options": [ "absent", "present" ]
+    }
+  }
+}
